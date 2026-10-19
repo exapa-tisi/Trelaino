@@ -1,0 +1,37 @@
+{
+  "name": "trelaino",
+  "version": "1.0.0",
+  "description": "Polytrack but with more technicalities",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test",
+    "asbuild:debug": "asc assembly/index.ts --target debug",
+    "asbuild:release": "asc assembly/index.ts --target release",
+    "asbuild": "npm run asbuild:debug && npm run asbuild:release",
+    "start": "npx serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exapa-tisi/Trelaino.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/exapa-tisi/Trelaino/issues"
+  },
+  "homepage": "https://github.com/exapa-tisi/Trelaino#readme",
+  "dependencies": {
+    "@assemblyscript/loader": "^0.28.20"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.28.20"
+  },
+  "exports": {
+    ".": {
+      "import": "./build/release.js",
+      "types": "./build/release.d.ts"
+    }
+  }
+}
